@@ -552,7 +552,8 @@ main p {
   outline: none;
   color: #ffffff;
   padding-left: 30px;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  max-width: 180px; }
   .callback-form__input::-webkit-input-placeholder {
     color: #ffffff; }
   .callback-form__input:-ms-input-placeholder {

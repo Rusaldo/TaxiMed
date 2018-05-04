@@ -1,0 +1,48 @@
+.callback-form__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: #8f8f8f;
+  height: 55px;
+  border-radius: 30px;
+}
+.callback-form__input {
+  width: 100%;
+  border: none;
+  background: #8f8f8f;
+  height: 55px;
+  outline: none;
+  color: $text-light;
+  padding-left: 30px;
+  font-size: 1.4rem;
+  &::placeholder {
+    color: $text-light;
+  }
+}
+.callback-form__btn {
+  display: inline-block;
+  border: none;
+  background: $tertiary;
+  transition: $fast;
+  cursor: pointer;
+  height: 55px;
+  color: $text-light;
+  font-size: 1.3rem;
+  padding: 20px;
+  right: 0;
+  top: 0;
+  margin-left: auto;
+  &:hover, &:focus {
+    background: $tertiary-hover;
+  }
+}
+input.callback-form__btn,
+input.callback-form__input {
+  border-radius: 30px;
+}
+
+@media screen and (max-width: $tablet) {
+  .callback-form__input {
+    padding-left: 10px;
+  }
+}

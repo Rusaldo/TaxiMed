@@ -1,0 +1,150 @@
+.sidebar {
+  width: 392px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(23, 26, 27, 0.6);
+  overflow-y: scroll;
+}
+.sidebar__toggle {
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  color: $text-light;
+  background: url(../img/icon-phone-circle.svg) no-repeat center / cover;
+  cursor: pointer;
+  display: none;
+}
+.sidebar__close {
+  width: 35px;
+  height: 35px;
+  background: none;
+  border: none;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  align-self: flex-start;
+  cursor: pointer;
+  display: none;
+  &-line {
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background-color: $text-light;
+    &:nth-child(1) {
+      transform: rotate(45deg);
+    }
+    &:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+.sidebar__body {
+  padding: 45px 4.5% 0;
+}
+.sidebar__logo {
+  margin-bottom: 40px;
+}
+.sidebar__btn {
+  padding-left: 60px;
+  background: $secondary url(../img/icon-arrow.png) no-repeat 25px center;
+}
+.sidebar__phone {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 40px;
+  background: url(../img/icon-phone.png) no-repeat 0 3px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  a {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 7px;
+    transition: $fast;
+    &:hover, &:focus {
+      color: $secondary;
+    }
+  }
+}
+.sidebar__hours {
+  padding-left: 40px;
+  background: url(../img/icon-hours.png) no-repeat 0 3px;
+  line-height: 1.5;
+  margin-top: 27px;
+}
+.sidebar__email {
+  padding: 35px 0;
+  text-align: center;
+  border-top: 1px solid #b0bdc1;
+  margin-top: 33px;
+  a {
+    padding-left: 40px;
+    background: url(../img/icon-mail.png) no-repeat 0px center;
+    transition: $fast;
+    &:hover, &:focus {
+      color: $secondary;
+    }
+  }
+}
+.sidebar__footer {
+  width: 100%;
+  padding: 55px 11% 66px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: $primary;
+}
+.sidebar__offer {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 45px;
+}
+.sidebar__offer-discont {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+@media screen and (max-width: $tablet) {
+  .sidebar {
+    transform: translateX(100%);
+    width: 300px;
+    background: #000;
+    transition: transform .5s;
+    &_open {
+      transform: translateX(0);
+    }
+  }
+  .sidebar__toggle,
+  .sidebar__close {
+    display: inline-block;
+  }
+  .sidebar__logo {
+    margin-bottom: 20px;
+  }
+  .sidebar__footer {
+    padding: 30px 20px;
+  }
+  .sidebar__offer {
+    margin-bottom: 25px;
+  }
+  .sidebar__email {
+    padding: 20px 0;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: $phone) {
+  .sidebar {
+    width: 100%;
+  }
+}
